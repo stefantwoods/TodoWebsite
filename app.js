@@ -15,3 +15,31 @@ input.addEventListener('keypress', function(e) {
     }
 });
 
+// 4. Function to add a todo
+function addTodo(text) {
+    const todo = {
+        id: Date.now(),
+        text: text,
+        completed: false
+    };
+    todos.push(todo);
+    render();
+}
+
+// 5. Function to render todos
+function render() {
+    // clear the list
+    todoList.innerHTML = '';
+
+    // add each todo
+    todos.forEach(todo => {
+        const li = document.createElement('li');
+        li.className = todo.completed ? 'todo-item completed' : 'todo-item';
+        li.innerHTML = `
+            <input type="checkbox" class="toggle" ${todo.completed ? 'checked' : ''}>
+            <label>${todo.text}</label>
+            <button class="destroy">x</button>
+        `;
+        todoList.appendChild(li);
+    });
+}

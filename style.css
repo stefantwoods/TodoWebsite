@@ -80,6 +80,70 @@ button {
     border-bottom: 1px solid #e6e6e6;
 }
 
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style each todo item */
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ededed;
+    font-size: 24px;
+}
+
+/* Style the checkbox */
+.todo-item .toggle {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+    /* Custom checkbox styling (optional) */
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #b8b8b8;
+    border-radius: 50%;
+    outline: none;
+}
+
+.todo-item .toggle:checked {
+    border-color: #08ff15;
+    background-color: #08ff15;
+}
+
+/* Style the label */
+.todo-item label {
+    flex: 1;
+    word-break: break-word;
+    padding: 15px 15px 15px 0;
+    line-height: 1.2;
+}
+
+.todo-item .destroy {
+    display: none;  /* Hidden by default */
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    color: #cc9a9a;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Show delete on hover */
+.todo-item:hover .destroy {
+    display: block;
+}
+
+/* Completed todo styling */
+.todo-item.completed label {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+
 .footer{
     display: flex;
     justify-content: center;    /* Center items horizontally */
