@@ -1,0 +1,133 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Remove list bullets */
+ul {
+    list-style: none;
+  }
+
+/* Style inputs */
+input {
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+/* Remove button styles */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+/* Variables for consistency */
+:root {
+    --primary: #4d90fe;
+    --gray: #666;
+    --light-gray: #ededed;
+  }
+  
+  /* Hover states */
+  .todo-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Completed todos */
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  /* Center app */
+  body {
+    font-family: Arial, sans-serif;
+    background: #dcdcdc;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align to top */
+  }
+  h1{
+    background: #dcdcdc;
+    text-align: center;  
+    padding: 20px 40px;
+  }
+
+  .main {
+    min-height: 300px;  /* Minimum height even when empty */
+    background-color: white;
+}
+
+  /* Main container */
+  .todo-app {
+    width: 100%;
+    max-width: 550px;
+    margin: 5 auto;
+    background: white;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+    margin-top: 50px;
+  }
+.header{
+    text-align: center;  
+    padding: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;    /* Center items horizontally */
+    align-items: center;        /* Center items vertically */
+    justify-content: space-between;
+    gap: 8px;
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+}
+
+.footer button{
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+}
+
+.filters{
+    display: flex;
+    gap: 20px;  /* space between buttons */
+    
+}
+
+.filters button {
+    color: #999;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;  /* ALL ACTIVE COMPLETED */
+    letter-spacing: 0.5px;  /* S p a c e d  o u t */
+}
+/* Hide but keep space */
+.hidden {
+    visibility: hidden;
+  }
+  
+  /* Hide completely */
+  .gone {
+    display: none;
+  }
+  
+  /* Show/hide on hover */
+  .todo-item .delete-btn {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .todo-item:hover .delete-btn {
+    opacity: 1;
+  }

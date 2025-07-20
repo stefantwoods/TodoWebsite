@@ -4,26 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>TodoWebsite</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>todos</h1>
-    <div><!-- This the main box that will hold the todo stuff -->
-      <input type="text" name="userInput" placeholder="What needs to be done?" />
-      <ul>
+    <div class="todo-app">
+      <h1>todos</h1>
+      <header class="header">
+        <input class="new-todo" type="text" placeholder="What needs to be done?" autofocus>
+      </header>
+      <main class="main">
+        <ul class="todo-list">
         <!--list items go in here-->
-      </ul>
+        </ul>
+      </main>
       <!--bottom bar that holds, how many tasks left, sorting, and clear completed-->
-      <footer class="todo-footer">
-        <span class="todo-count">num items left</span>
+        <footer class="footer">
+          <span class="todo-count">num items left</span>
         
-        <div class="filters">
-          <button class="filter-btn all">All</button>
-          <button class="filter-btn">Active</button>
-          <button class="filter-btn">Completed</button>
-        </div>
+          <div class="filters">
+            <button class="filter-btn all" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+          </div>
 
-        <button class="clear-completed">Clear completed</button>
-      </footer>
+          <button class="clear-completed">Clear completed</button>
+        </footer>
     </div>
   </body>
 </html>
